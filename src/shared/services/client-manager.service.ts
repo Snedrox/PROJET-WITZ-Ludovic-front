@@ -12,8 +12,7 @@ export class ClientManagerService {
 
   addClient(client: Client): Observable<Client> {
     let data: string;
-    const httpOptions = {headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded',
-        'Access-Control-Allow-Origin': '*'})};
+    const httpOptions = {headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded'})};
     data = 'name=' + client.name
       + '&surname=' + client.surname
       + '&login=' + client.login
